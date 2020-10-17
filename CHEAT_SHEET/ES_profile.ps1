@@ -538,6 +538,20 @@ function Linux-Commands
     whgreen " - wget file      = download file " 
     whgreen " - wget -c file   = continue stopped download " 
     whgreen " - wget -r url    = recursively download file " 
+    whgreen "cURL: "
+    whred   " https://ec.haxx.se/usingcurl/usingcurl-returns "
+    whgreen " - curl -v http://example.com -o saved                                            = Verbose " 
+    whgreen " - curl --trace-time dump http://example.com                                      = Trace time "
+    whgreen " - curl -w @filename http://example.com/                                          = Output "
+    whgreen " - curl -w @- http://example.com/                                                 = Output "
+    whgreen ' - curl -w "Type: %{content_type}\nCode: %{response_code}\n" http://example.com   = Output '
+    whgreen " - curl -o output.html http://example.com/                                        = Storing download"
+    whgreen " - curl -T uploadthis http://example.com/                                         = Upload (put) "
+    whgreen " - curl -T uploadthis ftp://example.com/this/directory/                           = Upload (ftp )"
+    whgreen " - curl -T mail smtp://mail.example.com/ --mail-from user@example.com             = Upload (smtp) "
+    whgreen ' - curl -H "Host: www.example.com" http://localhost/                              = Send header '
+    whgreen " - curl --interface 192.168.0.2 https://www.example.com/                          = Net interface "
+    whgreen " - curl --local-port 4000-4200 https://example.com/                               = Local port "
     whgreen ""
     #
     Write-host -foregroundcolor red "SYSTEM INFO "
