@@ -285,8 +285,8 @@ function Nmap-Commands
     whgray ' - ndiff scanl.xml scan2.xml '
     whgray ' - xsltproc nmap.xml -o nmap.html'
     whgray " - grep  'open' results.nmap | sed -r 's/ +/ /g' | sort | uniq -c | sort -rn | less "
-    whgray " - ports=$(nmap -Pn -p- --min-rate=1000 -T4 10.10.10.198 | grep ^[0-9] | cut -d '/' -f 1 | tr '\n' ',' | sed s/,$//) \ "
-    whgray " nmap -sC -sV -p$ports 10.10.10.198  "
+    whgray ' - ports=$(nmap -Pn -p- --min-rate=1000 -T4 10.10.10.198 | grep ^[0-9] | cut -d "/" -f 1 | tr "\n" "," | sed s/,$//) \ '
+    whgray ' nmap -sC -sV -p$ports 10.10.10.198  '
     whgray
 
 
