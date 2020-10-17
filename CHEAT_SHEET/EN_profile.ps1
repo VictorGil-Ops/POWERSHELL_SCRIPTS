@@ -3,7 +3,7 @@
 function Show-HelpBanner{
     
     Write-host ""
-    Write-host -foregroundcolor red "Comandos de ayuda Powershell" 
+    Write-host -foregroundcolor red "Powershell helper commands" 
     Write-host -foregroundcolor yellow " - SHOW-COMMAND" 
     Write-host -foregroundcolor yellow " - GET-HELP (Get-HELP ABOUT_*)" 
     Write-host -foregroundcolor yellow " - GET-HELP GET-SERVICE –Detailed" 
@@ -12,13 +12,13 @@ function Show-HelpBanner{
     Write-host -foregroundcolor yellow " - <cmdlet> | GET-MEMBER "
     Write-host -foregroundcolor yellow " - Get-WMIClass <pattern> "
     Write-host ""
-    Write-host -foregroundcolor red "Mostrar banner de ayuda 'helpme' "
+    Write-host -foregroundcolor red "Show help banner 'helpme' "
     Write-host ""
-    Write-host -foregroundcolor Cyan    " - Mostrar ayuda Windows     = ayudawin "
-    Write-host -foregroundcolor Yellow  " - Mostrar ayuda Powershell  = ayudaps "
-    Write-host -foregroundcolor Yellow  " - Mostrar ayuda Scripts PS  = psscripts "
-    Write-host -foregroundcolor Green   " - Mostrar ayuda Linux       = ayudalinux "
-    Write-host -foregroundcolor Magenta " - Mostrar ayuda Nmap        = ayudanmap "
+    Write-host -foregroundcolor Cyan    " - Show Windows help     = ayudawin "
+    Write-host -foregroundcolor Yellow  " - Show Powershell help  = ayudaps "
+    Write-host -foregroundcolor Yellow  " - Show PS Scripts Help  = psscripts "
+    Write-host -foregroundcolor Green   " - Show Linux help       = ayudalinux "
+    Write-host -foregroundcolor Magenta " - Show Nmap help        = ayudanmap "
     Write-host ""
 
 }
@@ -32,25 +32,25 @@ function whmagenta($message){Write-host -foregroundcolor magenta "$message"}
 function whyellow($message){Write-host -foregroundcolor yellow "$message"}
 
 
-# Menu ayuda Windows
+# Help menu Windows
 function Win-Help
 {
   Write-host ""
-  whcyan " - Herramientas administrativas de Windows = admin-tools "
-  whcyan " - ACL y permisos de usuario               = acl-permissions "
-  whcyan " - Utilidades de red                       = net-tools " 
+  whcyan " - Windows administrative tools = admin-tools "
+  whcyan " - ACL and user permissions     = acl-permissions "
+  whcyan " - Network utilities            = net-tools " 
   Write-host "" 
 }
 Set-Alias ayudawin Win-Help
 
 
-# Ayuda y Comandos de Windows 
+# Windows Help & Commands
 function Admin-Tools
 {
     Write-host ""
-    Write-host -foregroundcolor red "Herramientas administrativas de Windows "
+    Write-host -foregroundcolor red "Windows administrative tools "
     Write-host ""
-    whcyan " - wmimgmt.msc                 = Raíz de Consola / Control WMI "
+    whcyan " - wmimgmt.msc                 = Console Root/WMI Control "
     whcyan " - compmgmt.msc                = Administración de Equipos "
     whcyan " - devmgmt.msc                 = Administrador de Dispositivos "
     whcyan " - gpedit.msc                  = Editor de directivas locales "
