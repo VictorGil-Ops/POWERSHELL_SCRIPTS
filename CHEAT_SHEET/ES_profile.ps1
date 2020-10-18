@@ -30,7 +30,7 @@ function whcyan($message){Write-host -foregroundcolor cyan "$message"}
 function whgreen($message){Write-host -foregroundcolor green "$message"}
 function whgray($message){Write-host -foregroundcolor gray "$message"}
 function whyellow($message){Write-host -foregroundcolor yellow "$message"}
-
+function whred($message){Write-host -foregroundcolor red "$message"}
 
 # Menu ayuda Windows
 function Win-Help
@@ -554,6 +554,7 @@ function Linux-Commands
     whgreen ' - curl -H "Host: www.example.com" http://localhost/                              = Send header '
     whgreen " - curl --interface 192.168.0.2 https://www.example.com/                          = Net interface "
     whgreen " - curl --local-port 4000-4200 https://example.com/                               = Local port "
+    whgreen " - http_proxy=http://X.X.X.X:8080/ curl -4 -s http://google.com                   = Proxy HTTP "
     whgreen ""
     #
     Write-host -foregroundcolor red "SYSTEM INFO "

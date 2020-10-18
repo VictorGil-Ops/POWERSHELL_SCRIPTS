@@ -558,6 +558,7 @@ function Linux-Commands
     whgreen ' - curl -H "Host: www.example.com" http://localhost/                              = Send header '
     whgreen " - curl --interface 192.168.0.2 https://www.example.com/                          = Net interface "
     whgreen " - curl --local-port 4000-4200 https://example.com/                               = Local port "
+    whgreen " - http_proxy=http://X.X.X.X:8080/ curl -4 -s http://google.com                   = Proxy HTTP "
     whgreen ""
     #
     Write-host -foregroundcolor red "SYSTEM INFO "
