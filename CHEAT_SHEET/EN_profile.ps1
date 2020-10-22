@@ -26,11 +26,13 @@ Set-Alias helpme Show-HelpBanner
 helpme
 
 # Colores
+# Colores
 function whcyan($message){Write-host -foregroundcolor cyan "$message"}
 function whgreen($message){Write-host -foregroundcolor green "$message"}
 function whgray($message){Write-host -foregroundcolor gray "$message"}
 function whyellow($message){Write-host -foregroundcolor yellow "$message"}
 function whred($message){Write-host -foregroundcolor red "$message"}
+function whdarkgray($message){Write-host -foregroundcolor darkgray "$message"}
 
 
 # Help menu Windows
@@ -442,7 +444,7 @@ function PS-Scripts
     Write-host -foregroundcolor red "IP Tools "
     whyellow " - GEOLocalize   "
     whyellow " - PingRange     "
-    whyellow " - Get-PublicIP  "
+    whyellow " - PublicIP  "
     whyellow ""
     Write-host -foregroundcolor red "Remote PC "
     whyellow " - ConectRPC       "
@@ -756,7 +758,7 @@ Param($Range)
 
 
 # IP Publica
-Function Get-PublicIP
+Function PublicIP
 {
 <#
 

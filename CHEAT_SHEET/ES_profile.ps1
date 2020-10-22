@@ -18,12 +18,12 @@ function Show-HelpBanner{
     Write-host -foregroundcolor Yellow  " - Mostrar ayuda Powershell  = ayudaps "
     Write-host -foregroundcolor Yellow  " - Mostrar ayuda Scripts PS  = psscripts "
     Write-host -foregroundcolor Green   " - Mostrar ayuda Linux       = ayudalinux "
-    Write-host -foregroundcolor Magenta " - Mostrar ayuda Nmap        = ayudanmap "
+    Write-host -foregroundcolor DarkGray " - Mostrar ayuda Nmap        = ayudanmap "
     Write-host ""
 
 }
-Set-Alias helpme Show-HelpBanner
-helpme
+Set-Alias ayuda Show-HelpBanner
+ayuda
 
 # Colores
 function whcyan($message){Write-host -foregroundcolor cyan "$message"}
@@ -31,6 +31,7 @@ function whgreen($message){Write-host -foregroundcolor green "$message"}
 function whgray($message){Write-host -foregroundcolor gray "$message"}
 function whyellow($message){Write-host -foregroundcolor yellow "$message"}
 function whred($message){Write-host -foregroundcolor red "$message"}
+function whdarkgray($message){Write-host -foregroundcolor darkgray "$message"}
 
 # Menu ayuda Windows
 function Win-Help
@@ -289,6 +290,7 @@ function Nmap-Commands
 
 }
 Set-Alias ayudanmap Nmap-Commands
+Set-Alias amap Nmap-Commands
 
 # POWERSHELL
 function Powershell-Help
@@ -429,7 +431,10 @@ function Powershell-Help
    whyellow " - ValidateRange([1..10])                   = Hace cumplir los valores de los parametros en el rango "
    whyellow ""
    
-} Set-Alias ayudaps Powershell-Help
+} 
+Set-Alias ayudaps Powershell-Help
+Set-Alias aps Powershell-Help
+
 
 # PS Scripts
 function PS-Scripts
@@ -455,7 +460,9 @@ function PS-Scripts
     whyellow ""
 
 
-}Set-Alias psscripts PS-Scripts
+}
+Set-Alias psscripts PS-Scripts
+
 
 #
 function Linux-Commands
@@ -671,7 +678,9 @@ function Linux-Commands
     #
 
 
-}Set-Alias ayudalinux Linux-Commands
+}
+Set-Alias ayudalinux Linux-Commands
+Set-Alias alinux Linux-Commands
 
 
 
@@ -752,7 +761,7 @@ Param($Range)
 
 
 # IP Publica
-Function Get-PublicIP
+Function PublicIP
 {
 <#
 
