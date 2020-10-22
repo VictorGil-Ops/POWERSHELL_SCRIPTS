@@ -584,7 +584,7 @@ function Linux-Commands
    
     #
     Write-host -foregroundcolor red "SYSTEM INFO "
-    whgreen " - hostnamectl                = Mostrar informacion identificaion servidor " 
+    whgreen " - hostnamectl                = Control the system hostname " 
     whgreen " - date                       = show current date/time " 
     whgreen " - cal                        = show moth's calendar " 
     whgreen " - uptime                     = show uptime host " 
