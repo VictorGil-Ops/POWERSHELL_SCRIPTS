@@ -681,8 +681,8 @@ function Linux-Commands
     whgreen " - userdel                  = remove user "
     whgreen ""
     whgreen ""
-
-
+    
+    #
     Write-host -foregroundcolor red "COMMAND LINE FU "
     whgreen " - time read                 " 
     whgreen " - man ascii                 " 
