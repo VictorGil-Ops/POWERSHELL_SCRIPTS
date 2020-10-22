@@ -18,7 +18,8 @@ function Show-HelpBanner{
     Write-host -foregroundcolor Yellow  " - Show Powershell help  = ayudaps "
     Write-host -foregroundcolor Yellow  " - Show PS Scripts Help  = psscripts "
     Write-host -foregroundcolor Green   " - Show Linux help       = ayudalinux "
-    Write-host -foregroundcolor Magenta " - Show Nmap help        = ayudanmap "
+    Write-host -foregroundcolor grey " - Show Nmap help        = ayudanmap "
+    Write-host -foregroundcolor DarkYellow    " - Mostrar ayuda MSF         = ayudamsf "
     Write-host ""
 
 }
@@ -29,10 +30,10 @@ helpme
 # Colores
 function whcyan($message){Write-host -foregroundcolor cyan "$message"}
 function whgreen($message){Write-host -foregroundcolor green "$message"}
-function whgray($message){Write-host -foregroundcolor gray "$message"}
 function whyellow($message){Write-host -foregroundcolor yellow "$message"}
+function whgray($message){Write-host -foregroundcolor gray "$message"}
+function whdarkyellow($message){Write-host -foregroundcolor darkyellow "$message"}
 function whred($message){Write-host -foregroundcolor red "$message"}
-function whdarkgray($message){Write-host -foregroundcolor darkgray "$message"}
 
 
 # Help menu Windows
@@ -697,6 +698,33 @@ function Linux-Commands
 
 
 }Set-Alias ayudalinux Linux-Commands
+
+
+# MSF
+function Msf-Help
+{
+    whdarkYellow ""
+    whred        "METASPLOIT "
+    whred        " https://www.offensive-security.com/metasploit-unleashed/introduction/ "
+    whdarkYellow " - show options "
+    whdarkYellow " - "
+    whdarkYellow " - "
+    whdarkYellow " - "
+    whdarkYellow " - "
+    whdarkYellow " - "
+    whred        "searchsploit "
+    whdarkYellow " - searchsploit -u                                  = update "
+    whdarkYellow " - searchsploit -h                                  = help "
+    whdarkYellow " - searchsploit afd windows local                   = Basic Search"
+    whdarkYellow " - searchsploit -t oracle windows                   = Title Search "
+    whdarkYellow " - searchsploit -m 39446 win_x86-64/local/39525.py  = Copy to folder "
+    whdarkYellow " - searchsploit WarFTP 1.65 -w                      = ExploirDB Online "
+    whdarkYellow ""
+    
+
+}
+Set-Alias ayudamsf Msf-Help
+Set-Alias amsf Msf-Help
 
 
 

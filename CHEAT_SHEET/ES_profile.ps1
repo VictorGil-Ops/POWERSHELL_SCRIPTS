@@ -29,10 +29,11 @@ ayuda
 # Colores
 function whcyan($message){Write-host -foregroundcolor cyan "$message"}
 function whgreen($message){Write-host -foregroundcolor green "$message"}
-function whgray($message){Write-host -foregroundcolor gray "$message"}
 function whyellow($message){Write-host -foregroundcolor yellow "$message"}
+function whgray($message){Write-host -foregroundcolor gray "$message"}
+function whdarkyellow($message){Write-host -foregroundcolor darkyellow "$message"}
 function whred($message){Write-host -foregroundcolor red "$message"}
-function whdarkgray($message){Write-host -foregroundcolor darkgray "$message"}
+
 
 # Menu ayuda Windows
 function Win-Help
