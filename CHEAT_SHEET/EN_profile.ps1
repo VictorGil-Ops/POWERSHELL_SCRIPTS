@@ -18,7 +18,7 @@ function Show-HelpBanner{
     Write-host -foregroundcolor Yellow  " - Show Powershell help  = ayudaps "
     Write-host -foregroundcolor Yellow  " - Show PS Scripts Help  = psscripts "
     Write-host -foregroundcolor Green   " - Show Linux help       = ayudalinux "
-    Write-host -foregroundcolor grey " - Show Nmap help        = ayudanmap "
+    Write-host -foregroundcolor Gray " - Show Nmap help        = ayudanmap "
     Write-host -foregroundcolor DarkYellow    " - Mostrar ayuda MSF         = ayudamsf "
     Write-host ""
 

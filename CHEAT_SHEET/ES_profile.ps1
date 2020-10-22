@@ -18,7 +18,7 @@ function Show-HelpBanner{
     Write-host -foregroundcolor Yellow  " - Mostrar ayuda Powershell  = ayudaps "
     Write-host -foregroundcolor Yellow  " - Mostrar ayuda Scripts PS  = psscripts "
     Write-host -foregroundcolor Green   " - Mostrar ayuda Linux       = ayudalinux "
-    Write-host -foregroundcolor DarkGray " - Mostrar ayuda Nmap        = ayudanmap "
+    Write-host -foregroundcolor Gray " - Mostrar ayuda Nmap        = ayudanmap "
     Write-host -foregroundcolor DarkYellow    " - Mostrar ayuda MSF         = ayudamsf "
     Write-host ""
 
@@ -292,7 +292,7 @@ function Nmap-Commands
 
 }
 Set-Alias ayudanmap Nmap-Commands
-Set-Alias amap Nmap-Commands
+Set-Alias anmap Nmap-Commands
 
 # POWERSHELL
 function Powershell-Help
@@ -711,12 +711,39 @@ function Msf-Help
     whdarkYellow ""
     whred        "METASPLOIT "
     whred        " https://www.offensive-security.com/metasploit-unleashed/introduction/ "
-    whdarkYellow " - show options "
-    whdarkYellow " - "
-    whdarkYellow " - "
-    whdarkYellow " - "
-    whdarkYellow " - "
-    whdarkYellow " - "
+    whred        "Useful Auxiliary Modules "
+    whyellow     "Port Scanner: "
+    whdarkYellow " - use auxiliary/scanner/portscan/tcp "
+    whdarkYellow " - set RHOSTS 10.10.10.0/24 "
+    whdarkYellow " - run "
+    whdarkYellow "DNS Enumeration "
+    whdarkYellow " - use auxiliary/gather/dns_enum "
+    whdarkYellow " - set DOMAIN target.tgt "
+    whdarkYellow " - run"
+    whdark       "FTP Server "
+    whdarkYellow " - use auxiliary/server/ftp  "
+    whdarkYellow " - set FTPROOT /tmp/ftproot"
+    whdarkYellow " - run "
+    whYellow     "Proxy Server"
+    whdarkYellow " - use auxiliary/server/socks4 "
+    whdarkYellow " - run "
+    whdarkYellow " -  "
+    whdarkYellow " -  "
+    whdarkYellow " -  "
+    whdarkYellow " -  "
+    whdarkYellow " -  "
+    whdarkYellow " -  "
+    whdarkYellow " -  "
+    whdarkYellow " -  "
+    whdarkYellow " -  "
+    whdarkYellow " -  "
+    whdarkYellow " -  "
+    whdarkYellow " -  "
+    whdarkYellow " -  "
+    whdarkYellow " -  "
+    whdarkYellow " -  "
+    whdarkYellow " -  "
+    whdarkYellow " -  "
     whred        "searchsploit "
     whdarkYellow " - searchsploit -u                                  = update "
     whdarkYellow " - searchsploit -h                                  = help "
