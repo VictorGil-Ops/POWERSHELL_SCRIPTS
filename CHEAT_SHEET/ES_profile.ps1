@@ -820,7 +820,6 @@ function Msf-Help
     whdarkYellow " - searchsploit -m 39446 win_x86-64/local/39525.py  = Copy to folder "
     whdarkYellow " - searchsploit WarFTP 1.65 -w                      = ExploirDB Online "
     whdarkYellow ""
-    
 
 }
 Set-Alias ayudamsf Msf-Help
