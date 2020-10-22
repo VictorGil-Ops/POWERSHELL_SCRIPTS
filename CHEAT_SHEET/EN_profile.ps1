@@ -562,6 +562,7 @@ function Linux-Commands
     whgreen " - curl --local-port 4000-4200 https://example.com/                               = Local port "
     whgreen " - http_proxy=http://X.X.X.X:8080/ curl -4 -s http://google.com                   = Proxy HTTP "
     whgreen ""
+    
     #
     Write-host -foregroundcolor red "NETWORK MANAGER"
     whgreen " - vi /etc/sysconfig/network-scripts/ifcfg-eth0                = Ruta configuración adaptadores de red "
@@ -572,11 +573,13 @@ function Linux-Commands
     whgreen " - nmcli con down static2                                      = Deshablitar dispositivo static2 "
     whgreen ' - nmcli con mod static2 ipv4.dns "8.8.8.8 8.8.4.4"            = Modificar dns adaptador static2 '
     whgreen " - nmcli con mod static2 connection.permissions user:<users>   = Establecer permisos para usuarios "
-    whgreen ' - nmtui edit eth0                                             = Configurar dispositvos de red ' 
+    whgreen " - nmtui                                                       = NetworkManager's tool"
+    whgreen ' - nmtui edit eth0                                             = Editar dispositvo de red eth0 ' 
     whred   " ejemplos: "
     whgreen " - nmcli con add type ethernet con-name static2 ifname enp0s3 ip4 192.168.1.50/24 gw4 192.168.1.1 "
     whgreen " - nmcli con add type ethernet con-name Myhome1 ifname enp0s3"
     whgreen "" 
+    
     #
     Write-host -foregroundcolor red "SYSTEM INFO "
     whgreen " - date                       = show current date/time " 
