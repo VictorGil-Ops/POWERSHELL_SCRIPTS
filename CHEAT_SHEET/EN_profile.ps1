@@ -20,6 +20,7 @@ function Show-HelpBanner{
     Write-host -foregroundcolor Green   " - Show Linux help       = ayudalinux "
     Write-host -foregroundcolor Gray " - Show Nmap help        = ayudanmap "
     Write-host -foregroundcolor DarkYellow    " - Mostrar ayuda MSF         = ayudamsf "
+    Write-host Write-host -foregroundcolor DarkGray " - "
     Write-host ""
 
 }
@@ -695,7 +696,6 @@ function Linux-Commands
     whgreen " - ssh -t reachable_host ssh unreachable_host "
     whgreen "" 
     #
-
 
 }Set-Alias ayudalinux Linux-Commands
 

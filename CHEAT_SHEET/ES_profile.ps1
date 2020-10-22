@@ -20,6 +20,7 @@ function Show-HelpBanner{
     Write-host -foregroundcolor Green   " - Mostrar ayuda Linux       = ayudalinux "
     Write-host -foregroundcolor Gray " - Mostrar ayuda Nmap        = ayudanmap "
     Write-host -foregroundcolor DarkYellow    " - Mostrar ayuda MSF         = ayudamsf "
+    Write-host -foregroundcolor DarkGray     " - Mostrar ayuda tcpdump     = ayudatcpdump"
     Write-host ""
 
 }
