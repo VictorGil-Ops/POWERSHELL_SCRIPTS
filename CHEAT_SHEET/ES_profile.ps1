@@ -19,6 +19,7 @@ function Show-HelpBanner{
     Write-host -foregroundcolor Yellow  " - Mostrar ayuda Scripts PS  = psscripts "
     Write-host -foregroundcolor Green   " - Mostrar ayuda Linux       = ayudalinux "
     Write-host -foregroundcolor DarkGray " - Mostrar ayuda Nmap        = ayudanmap "
+    Write-host -foregroundcolor DarkYellow    " - Mostrar ayuda MSF         = ayudamsf "
     Write-host ""
 
 }
@@ -563,6 +564,23 @@ function Linux-Commands
     whgreen " - curl --local-port 4000-4200 https://example.com/                               = Local port "
     whgreen " - http_proxy=http://X.X.X.X:8080/ curl -4 -s http://google.com                   = Proxy HTTP "
     whgreen ""
+
+    #
+    Write-host -foregroundcolor red "NETWORK MANAGER"
+    whgreen " - vi /etc/sysconfig/network-scripts/ifcfg-eth0                = Ruta configuración adaptadores de red "
+    whgreen " - vi /etc/resolv.conf                                         = Verificar configuracion DNS " 
+    whgreen " - nmcli -p dev                                                = Mostrar dispositivos " 
+    whgreen " - nmcli con show                                              = Mostrar disposivos "
+    whgreen " - nmcli con up static2                                        = Activar el dispositivo static2 "
+    whgreen " - nmcli con down static2                                      = Deshablitar dispositivo static2 "
+    whgreen ' - nmcli con mod static2 ipv4.dns "8.8.8.8 8.8.4.4"            = Modificar dns adaptador static2 '
+    whgreen " - nmcli con mod static2 connection.permissions user:<users>   = Establecer permisos para usuarios "
+    whgreen ' - nmtui edit eth0                                             = Configurar dispositvos de red ' 
+    whred   " ejemplos: "
+    whgreen " - nmcli con add type ethernet con-name static2 ifname enp0s3 ip4 192.168.1.50/24 gw4 192.168.1.1 "
+    whgreen " - nmcli con add type ethernet con-name Myhome1 ifname enp0s3"
+    whgreen "" 
+   
     #
     Write-host -foregroundcolor red "SYSTEM INFO "
     whgreen " - date                       = show current date/time " 
@@ -661,6 +679,7 @@ function Linux-Commands
     whgreen ""
     whgreen ""
 
+
     Write-host -foregroundcolor red "COMMAND LINE FU "
     whgreen " - time read                 " 
     whgreen " - man ascii                 " 
@@ -681,6 +700,33 @@ function Linux-Commands
 }
 Set-Alias ayudalinux Linux-Commands
 Set-Alias alinux Linux-Commands
+
+
+# MSF
+function Msf-Help
+{
+    whdarkYellow ""
+    whred        "METASPLOIT "
+    whred        " https://www.offensive-security.com/metasploit-unleashed/introduction/ "
+    whdarkYellow " - show options "
+    whdarkYellow " - "
+    whdarkYellow " - "
+    whdarkYellow " - "
+    whdarkYellow " - "
+    whdarkYellow " - "
+    whred        "searchsploit "
+    whdarkYellow " - searchsploit -u                                  = update "
+    whdarkYellow " - searchsploit -h                                  = help "
+    whdarkYellow " - searchsploit afd windows local                   = Basic Search"
+    whdarkYellow " - searchsploit -t oracle windows                   = Title Search "
+    whdarkYellow " - searchsploit -m 39446 win_x86-64/local/39525.py  = Copy to folder "
+    whdarkYellow " - searchsploit WarFTP 1.65 -w                      = ExploirDB Online "
+    whdarkYellow ""
+    
+
+}
+Set-Alias ayudamsf Msf-Help
+Set-Alias amsf Msf-Help
 
 
 
