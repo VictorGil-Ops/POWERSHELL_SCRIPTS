@@ -704,7 +704,6 @@ function Linux-Commands
 Set-Alias ayudalinux Linux-Commands
 Set-Alias alinux Linux-Commands
 
-
 # MSF
 function Msf-Help
 {
@@ -720,7 +719,7 @@ function Msf-Help
     whdarkYellow " - use auxiliary/gather/dns_enum "
     whdarkYellow " - set DOMAIN target.tgt "
     whdarkYellow " - run"
-    whdark       "FTP Server "
+    whyellow     "FTP Server "
     whdarkYellow " - use auxiliary/server/ftp  "
     whdarkYellow " - set FTPROOT /tmp/ftproot"
     whdarkYellow " - run "
@@ -739,6 +738,7 @@ function Msf-Help
     whdarkYellow " - set [Option] [Value]: "
     whyellow     "Start exploit "
     whdarkYellow " - exploit "
+    whdarkYellow ""
     whyellow     "Metasploit Meterpreter "
     whyellow     "Base Commands:  "
     whdarkYellow " - ? / help: Display a summary of commands "
@@ -754,10 +754,33 @@ function Msf-Help
     whdarkYellow " - download / upload: Move files to/from the target machine "
     whdarkYellow " - mkdir / rmdir: Make / remove directory "
     whdarkYellow " - edit: Open a file in the default editor (typically vi) "
+    whdarkYellow ""
     whyellow     "Metasploit Meterpreter (contd) "
-    whdarkYellow " -  "
-    whdarkYellow " -  "
-    whdarkYellow " -  "
+    whdarkYellow " - getpid: Display the process ID that Meterpreter is running inside "
+    whdarkYellow " - ps: Display process list "
+    whdarkYellow " - kill: Terminate a process given its process ID "
+    whdarkYellow " - execute: Run a given program with the privileges of the process the Meterpreter is loaded in "
+    whdarkYellow " - migrate: `
+            - Jump to a given destination process ID `
+            - Target process must have same or lesser privileges ` 
+            - Target process may be a more stable process
+            - When inside a process, can access any files that process has a lock on "
+    whyellow     "Network Commands: "
+    whdarkYellow " - ipconfig: Show network interface information  "
+    whdarkYellow " - portfwd: Forward packets through TCP session "
+    whdarkYellow " - route: Manage/view the system's routing table "
+    whyellow     "Misc Commands: "
+    whdarkYellow " - idletime: Display the duration that the GUI of the target machine has been idle "
+    whdarkYellow " - uictl [enable/disable] [keyboard/mouse]: Enable/disable either the mouse orkeyboard of the target machine  "
+    whdarkYellow " - screenshot: Save as an image a screenshot of the target machine "
+    whdarkYellow "Additional Modules: "
+    whdarkYellow " - use [module]: Load the specified module "
+    whdarkYellow " - Example: "
+    whdarkYellow " - use priv: Load the priv module "
+    whdarkYellow " - hashdump: Dump the hashes from the box  "
+    whdarkYellow " - timestomp:Alter NTFS file timestamps  "
+    whyellow     "Managing Sessions "
+    whdarkYellow "Multiple Exploitation: "
     whdarkYellow " -  "
     whdarkYellow " -  "
     whdarkYellow " -  "
