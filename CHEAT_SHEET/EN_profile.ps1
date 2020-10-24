@@ -20,7 +20,7 @@ function Show-HelpBanner{
     Write-host -foregroundcolor Green   " - Show Linux help       = ayudalinux "
     Write-host -foregroundcolor Gray " - Show Nmap help        = ayudanmap "
     Write-host -foregroundcolor DarkYellow    " - Mostrar ayuda MSF         = ayudamsf "
-    Write-host Write-host -foregroundcolor DarkGray " - "
+    Write-host -foregroundcolor DarkGray     " - Mostrar ayuda tcpdump     = ayudatcpdump"
     Write-host ""
 
 }
@@ -35,7 +35,7 @@ function whyellow($message){Write-host -foregroundcolor yellow "$message"}
 function whgray($message){Write-host -foregroundcolor gray "$message"}
 function whdarkyellow($message){Write-host -foregroundcolor darkyellow "$message"}
 function whred($message){Write-host -foregroundcolor red "$message"}
-
+function whdarkgray($message){Write-host -foregroundcolor DarkGray "$message"}
 
 # Help menu Windows
 function Win-Help
@@ -821,6 +821,33 @@ function Msf-Help
 }
 Set-Alias ayudamsf Msf-Help
 Set-Alias amsf Msf-Help
+
+# tcpdump
+function Help-TcpDump 
+{
+  
+    whdarkgray ""
+    whdarkgray " - tcpdump -D                                            = Ver listado de intefaces "
+    whdarkgray " - tcpdump -i eth0 -w trafico.log                        = Capturar trafico y enviar a un fichero "
+    whdarkgray " - tcpdump -i eth0 (udp|tcp|icmp)                        = Capturar por protocolo "
+    whdarkgray " - tcpdump -i eth0 tcp port 80                           = Capturar por puerto "
+    whdarkgray " - tcpdump -i eth0 tcp port 80 and src 192.168.1.100     = Capturar por puerto 80, filtro por IP origen "
+    whdarkgray " - tcpdump -i eth0 tcp port 80 and dst 192.168.1.100     = Capturar por puerto 80, filtro por IP destino "
+    whdarkgray " - tcpdump -i eth0 -A                                    = Mostrar contenido de los paquetes en formato ASCII "
+    whdarkgray " - tcpdump -i eth0 -XX                                   = Capturar paquetes en hexadecimal y ASCII "
+    whdarkgray " - tcpdump -i eth0 not icmp                              = Capturar todo el trafico excepto ciertas condiciones "
+    whdarkgray " - tcpdump -i eth0 not icmp and not tcp                  = Capturar todo el trafico excepto ciertas condiciones "
+    whdarkgray " - tcpdump -i eth0 -v | -vv                              = Informacion extendida (verbose) "
+    whdarkgray " - tcpdump -r archivo.log                                = Leer captura de trafico almacenada en un archivo" 
+    whdarkgray "Ejemplos: "
+    whdarkgray " - tcpdump 'dst 192.168.1.100 and (port http or https)' "  
+    whdarkgray " - tcpdump 'tcp[tcpflags] & (tcp-syn|tcp-fin) != 0 and not src and dst net localnet' "
+    whdarkgray ""
+  
+}
+Set-Alias ayudatcpdump Help-TcpDump
+Set-Alias atcpdump ayudatcpdump
+
 
 
 # FUNCIONES 
