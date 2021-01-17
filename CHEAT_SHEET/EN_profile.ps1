@@ -345,6 +345,9 @@ function Powershell-Help
    whyellow " -?              = Display help for the cmdlet"
    whyellow ""
    #
+   Write-host -foregroundcolor red "ENVIRONMET VARIABLES"
+   whyellow ' $env:AZURE_RESOURCE_GROUP = 'MyTestResourceGroup' '
+   #
    Write-host -foregroundcolor red "WORKING WITH OBJECTS  "
    whyellow " Common pattern: Get | Filter/Group/Sort | Modify/Delete/Output/Convert "
    whyellow " - Where-Object     = Filters objects based on value of property "
